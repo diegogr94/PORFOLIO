@@ -3,18 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>MIS PROYECTOS</h1>
-   <h4>GitHub:</h4>
-   <a href="https://github.com/diegogr94/PORFOLIO">Enlace a GitHub</a><br><br>
-    <h4>Figma:</h4>
-    <a href="https://www.figma.com/design/d8xUypiU3H1H3v9PjL5mHG/Mi-portfolio?node-id=0-1&p=f&t=q6CIhEJmJp9LXMBb-0">Enlace a Figma</a><br><br>
-    
-    <h4>Gestión de fechas:</h4> <a href="https://github.com/diegogr94/T1_GESTION_FECHAS">Enlace a GitHub</a>
-    <h4>Ejecutable de fechas:</h4> <a href="https://diegogr94.github.io/T1_GESTION_FECHAS/">Web</a>
-    
+    <header class="header">
+        <div class="barraNavegacion">
+            <div class="barraNavegacion_logoNombre">
+                <img src="imagenes/logoPortfolio.png" alt="Logo DG" class="logo" />
+                <h3 class="nombre">Diego Guerrero</h3>
+            </div>
+            <div class="menu">
+                <h5><a class="menuItem" href="#main">Sobre mi</a></h5>
+            <h5><a class="menuItem" href="#proyectos">Proyectos</a></h5>
+            <h5><a class="menuItem" href="#contacto">Contacto</a></h5>
+            </div>
+        </div>
+    </header>
 
+    <main class="main" id="main">
+        <div class="barraDescripcion">
+            <div class="miFoto">
+                <img src="imagenes/miFoto.jpg" alt="Foto de Diego Guerrero" class="foto" />
+            </div>
+            <div class="descripcion">
+                <h1>Hola</h1>
+                <h2>
+                    Soy <span class="texto-verde">Diego Guerrero Ramos</span>, estudiante de
+                    <span class="texto-verde">Desarrollo de Aplicaciones Web</span>
+                    y te doy la bienvenida a mi
+                    <span class="texto-verde">portfolio personal</span>.
+                </h2>
+            </div>
+        </div>
+
+        <div class="cardsProyectos" id="proyectos">
+            <div class="cardsProyectos_lista">
+                <div class="cardProyecto">
+                    <div class="cardProyecto_nombre">
+                        <h1>GESTIÓN DE<br>FECHAS</h1>
+                    </div>
+                    <div class="cardProyecto_botones">
+                        <h2 class="cardProyecto_btn">
+  <a href="https://github.com/diegogr94/T1_GESTION_FECHAS">GitHub</a>
+</h2>
+                        <h2 class="cardProyecto_btn">
+                            <a href="https://diegogr94.github.io/T1_GESTION_FECHAS/">Web</a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="cardProyecto">
+                    <div class="cardProyecto_nombre">
+                        <h1>PORFOLIO Y<br>FIGMA</h1>
+                    </div>
+                    <div class="cardProyecto_botones">
+                        <h2 class="cardProyecto_btn">
+                            <a href="https://github.com/diegogr94/T1_GESTION_FECHAS">GitHub</a></h2>
+                        <h2 class="cardProyecto_btn">
+                            <a href="https://www.figma.com/design/d8xUypiU3H1H3v9PjL5mHG/Mi-portfolio?node-id=0-1&p=f&t=q6CIhEJmJp9LXMBb-0">Web</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="footer_texto">
+            <h4>Diego Guerrero Ramos --- Desarrollador de Aplicaciones Web</h4>
+            <h5>Contacto: dguerreror04@iesalbarregas.es</h5>
+        </div>
+    </footer>
 </body>
-</html>  
+</html>
+ 
