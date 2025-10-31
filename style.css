@@ -191,6 +191,12 @@ body {
     padding-right: 15px;
 }
 
+.cardProyecto_btn a {
+    color: var(--accentColor);
+    text-decoration: none;
+}
+
+
 
 .footer {
     background: var(--secondaryColor);
