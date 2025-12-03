@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 :root {
     --primaryColor: #000000; 
@@ -20,43 +20,30 @@
     --font-size-h5: 25px;   
 }
 
-h1 {
-    font-size: var(--font-size-h1);
-}
-h2 {
-    font-size: var(--font-size-h2);
-}
-h3 {
-    font-size: var(--font-size-h3);
-}
-h4 {
-    font-size: var(--font-size-h4);
-}
-h5 {
-    font-size: var(--font-size-h5);
-}
-
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
 
 body {
     background-color: var(--primaryColor);
-    
+    overflow-x: hidden; 
 }
-
 
 .header {
-    
     color: var(--tertiaryColor);
     font-family: var(--primary-font);
-    
+    width: 100%;
 }
-
 
 .barraNavegacion {   
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 20px;
+    flex-wrap: wrap;
 }
-
 
 .barraNavegacion_logoNombre {
     display: flex;
@@ -64,99 +51,86 @@ body {
     gap: 12px;
     padding-left: 33px;
     margin-top: 30px;
-    
 }
-
 
 .logo {
     height: 70px;
 }
 
-
 .menu  {
     display: flex;
     gap: 38px;
-    margin-right: 100px;
-    
+    margin-right: 80px; 
     margin-top: 30px;
-    
+    flex-wrap: wrap;
 }
-
 
 .menuItem {
     color: var(--tertiaryColor);
     text-decoration: none;
-    
 }
-
 
 .main {
-    
     min-height: 80vh;
     padding-top: 30px;
-    
     color: var(--tertiaryColor);
-    
 }
-
 
 .barraDescripcion {
     background-color: var(--secondaryColor);
     display: flex;
-    padding-left: 36px;
-    gap: 90px;
+    flex-wrap: wrap; 
+    padding: 40px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .miFoto {
-    width: 440px;
-    min-width: 220px;
-    max-width: 800px;
+    flex: 0 1 440px; 
+    min-width: 280px;
 }
-
-
-
-
 
 .miFoto .foto {
     width: 100%;
     display: block;
 }
 
-
 .descripcion {
     font-family: var(--secondary-font);
-  line-height: 1.2;
-  max-width: 900px;
-  margin-top: 40px;
+    line-height: 1.2;
+    flex: 1;
+    min-width: 300px;
+    max-width: 900px;
 }
-
 
 .texto-verde {
     color: var(--accentColor);
 }
 
+.cardsProyectos {
+    padding: 0 20px;
+}
 
 .cardsProyectos_lista {
     display: flex;
     justify-content: center;
-    gap: 86px;
-    
+    flex-wrap: wrap; 
+    gap: 60px;
     margin: 60px auto 0 auto;
-    
+    max-width: 1600px;
 }
-
 
 .cardProyecto {
-    width: 600px;
-    height: 600px;
-    
+    width: 100%; 
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
 .cardProyecto_nombre {
-    height: 70%;
+    flex-grow: 1; 
     background-color: var(--secondaryColor);
     display: flex;
     align-items: center;
@@ -164,31 +138,31 @@ body {
     font-family: var(--secondary-font);   
     color: var(--accentColor);
     text-align: center;
+    padding: 10px;
 }
 
+.cardProyecto_nombre h1 {
+    font-size: clamp(30px, 4vw, 55px); 
+    word-break: break-word;
+}
 
 .cardProyecto_botones {
-    
-    min-height: 142px;
+    min-height: 120px;
     background-color: var(--tertiaryColor);
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 40px;
     justify-content: center;
     font-weight: bold;
-   
+    flex-wrap: wrap;
+    padding: 10px;
 }
-
 
 .cardProyecto_btn {
     font-family: var(--secondary-font);
-    
     color: var(--accentColor);
     background-color: var(--secondaryColor);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 20px;
 }
 
 .cardProyecto_btn a {
@@ -196,98 +170,70 @@ body {
     text-decoration: none;
 }
 
-
-
 .footer {
     background: var(--secondaryColor);
-    
+    margin-top: 60px;
+    padding: 30px 0;
 }
-
 
 .footer_texto {
     font-family: var(--secondary-font);
     color: var(--tertiaryColor);
     text-align: center;
-    line-height: 1.05;
-    white-space: pre-line;
-    
+    line-height: 1.5;
+    padding: 0 20px;
 }
 
-
-
-
-
-
 @media (max-width: 768px) {
-
     h1, h2, h3, h4, h5, .menuItem {
-        font-size: 0.92em;
+        font-size: 0.9em;
     }
     
     .barraNavegacion {
-        height: 46px;
-        padding: 0 6px;
-        
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px;
     }
+
     .barraNavegacion_logoNombre {
         padding-left: 0;
-        margin-top: 0;
+        margin-top: 10px;
     }
+
     .nombre {
-        display: none;
+        display: block; 
+        font-size: 1.2em;
     }
+
     .logo {
         height: 50px;
-        margin-left: 15px;
-        margin-top: 30px;
+        margin: 0;
     }
+
     .menu {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        margin-right: 35px;
-        
+        margin: 0;
+        gap: 20px;
+        justify-content: center;
     }
-    
 
     .barraDescripcion {
-        align-items: center;
-        gap: 15px;
-        padding-left: 20px;
-     
-        
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center;
     }
 
-    .miFoto {
-        display: flex; 
-   
-    }
-   
-    .descripcion {
-        margin-bottom: 80px;
-    }
-  
     .cardProyecto {
-    width: 200px;      
-    height: 200px;
- 
-}
-
-.cardsProyectos_lista {
-    gap: 20px;
-}
-
-.cardProyecto_nombre h1 {
-    font-size: 1.13em;
+        max-width: 100%;     
+        height: auto;
+        min-height: 350px;
+    }
     
-}
+    .cardProyecto_nombre {
+        min-height: 200px;
+    }
 
-.cardProyecto_botones {
-    gap: 14px;
-    height: 45%;
-    
-    min-height: unset;
-    
-}
-
+    .cardsProyectos_lista {
+        gap: 40px;
+    }
 }
